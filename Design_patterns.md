@@ -3,13 +3,13 @@
 ![JavaScript image](img1.png)
 # **Introduction** 
 
-**Design patterns** are advanced *objec-oriented* solutions to commonly occuring software problems.
+**Design patterns** are advanced *object-oriented* solutions to commonly occurring software problems.
 
-The **Design patterns** help us build upon the combined experience of many developers that came before us and ensure we structure our code in  an optimized way, meeting the need of problems we're attempting to solve and gives common vocabulary used to describe solutions to our problems than describing the syntax and semantics of our code.
+The **Design patterns** help us build upon the combined experience of many developers that came before us and ensure we structure our code in an optimized way, meeting the need of problems we're attempting to solve and gives common vocabulary used to describe solutions to our problems than describing the syntax and semantics of our code.
 
 # What is Gang Of Four (GOF)?
 
-In 1994, four authors _**Erich Gamma,**_ _**Richard Helm,**_ _**Ralph Johnson,**_ and _**John Vlissides**_ published a book titled _**" Design Patterns - Elements of Reusable Object-Oriented Software "**_ which initiated
+In 1994, four authors _**Erich Gamma,**_ _**Richard Helm,**_ _**Ralph Johnson,**_ and _**John Vlissides**_ published a book titled _**Design Patterns - Elements of Reusable Object-Oriented Software**_ which initiated
 the concept of Design Patterns in Software development.
 
 The authors are collectively known as **Gang of Four (GOF)**.
@@ -23,16 +23,16 @@ The book can be found [here](https://books.google.co.in/books/about/Design_Patte
 
 - **They solve problems elegantly.** Design patterns reduce the size of a codebase through optimized solutions. 
 
-- **They are proven solutions.** The results are reliable and efficient. That is because they are derived from the best practices of other experienced developers. You can be certain they’ll work when implemented. 
+- **They are proven solutions.** The results are reliable and efficient. That is because they are  derived from the best practices of other experienced developers. You can be certain they’ll work when implemented. 
 
 - **They eradicate the need to refactor code.** Design patterns are the most tested, optimal solution for a given problem, so it’s unlikely that you’ll need to refactor the code.
 
 # Categories of Design patterns
 
-Design pattens are divided into many categories, but the most common are **Creational**, **Structural**  and **Behavioral**.
+Design patterns are divided into many categories, but the most common are **Creational**, **Structural**, and **Behavioral**.
 
 ## **1.Creational Pattern**
- These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using "**new** " operator. This gives the program more flexibility in deciding which objects need to be created for a given use case.
+ These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using the "**new**" operator. This gives the program more flexibility in deciding which objects need to be created for a given use case.
 
 Some of the popular design patterns in this category are :
 - Constructor Pattern
@@ -43,7 +43,7 @@ Some of the popular design patterns in this category are :
 
 
 ## **2. Structural Design Patterns**
-Structural patterns are concerned with object composition and typically identify simple ways to implement relationship between different objects. This help ensure that when one part of a system changes, the entire structure doesn’t need to do the same.
+Structural patterns are concerned with object composition and typically identify simple ways to implement a relationship between different objects. This helps to ensure that when one part of a system changes, the entire structure doesn’t need to do the same.
 
 Some of the popular design patterns in this category are :
 - Adapter
@@ -53,8 +53,8 @@ Some of the popular design patterns in this category are :
 - Facade
 
 
-## **3. Behavioral design Patterns**
-Behavioral design patterns are concerned with hnadling communications between  different objects in a system. They ensure that disparate parts of a system have synnchronized information.
+## **3. Behavioral Design Patterns**
+Behavioral design patterns are concerned with handling communications between two different objects in a system. They ensure that disparate parts of a system have synchronized information.
 
 Some of the popular design patterns in this category are :
 - Chain of responsibility
@@ -63,7 +63,7 @@ Some of the popular design patterns in this category are :
 - Mediator
 - Memento
 
-### With this understanding of the categorization, let’s examine some JavaScript Creational design pattern.
+### With this understanding of the categorization, let’s examine some JavaScript Creational design patterns.
 
 ## **1. The Constructor Pattern**
 The Constructor Pattern is one of the most simple, popular, and modern JS design patterns.
@@ -84,7 +84,7 @@ function Human(name, age, occupation)
     this.age=age;
     this.occupation=occupation;
 
-    //defining a method inside the constructor function
+    //Defining a method inside the constructor function
 
     this.describe = function( )
     {
@@ -92,19 +92,19 @@ function Human(name, age, occupation)
     }   
 }
 
-// creating a different objects using the Human constructor
+// Creating  different objects using the Human constructor
 
 var person= new Human(“Adam” , “23”, “Engineer”);
 var newperson = new Human("Joe", "13","Painter");
 
-// callinng the describe function for the created objects
+// Callinng the describe function for the created objects
 person.describe(); 
 newperson.describe();
 ```
 In the above example, the constructor function is defined and has the following properties
 name, age, occupation, describe( ).
 
-When a person object is created it will have its name age occupation propeties set to the argumentes passed to the constructor function and the describe method is invoked to display the contentts.
+When a person object is created it will have its name, age, occupation properties set to the arguments passed to the constructor function and the describe( ) is invoked to display the contents.
 
 
 ## **2. The Singleton Pattern**
@@ -156,11 +156,11 @@ run();
 ```
 In the above example whenever we try to create an *instance* of the *DataBase*, the **Singleton** class checks whether an instance of the class is present or not. If present it returns the address of the instance, else it creates the object and then returns the address.
 
-At any situation only one instance of the object will be present.
+In any situation, only one instance of the object will be present.
 
 
 ## **3. Factory Pattern**
-The Factory pattern provides a template that can be used to create objects. It is used in complex situations where the type of the object required can vary and needs to be specified in each case.
+The Factory pattern provides a template that can be used to create objects. It is used in complex situations where the type of object required can vary and needs to be specified in each case.
 
 It does not use the "*new* " keyword directly to instantiate objects; hence, it does not explicitly require the use of a constructor to create objects. Instead, it provides a generic interface that delegates the object creation responsibility to the corresponding sub-class.
 
@@ -190,7 +190,7 @@ class CarFactory
     }
 }
 
-// creating objects
+// Creating objects
 const CarFactory = new CarFactory();
 
 const sedan = CarFactory.createcar('sedan');
@@ -198,12 +198,12 @@ const sportscar = CarFactory.createcar('sportscar');
 const convertible = CarFactory.createcar('convertible');
 
 ```
-In the above example, the basic functions of the cars are same but they are built differently and they have different features.
+In the above example, the basic functions of the cars are the same but they have different features and functions.
 
 Here we are not directly creating the instance of the car using the *new* keyword. Rather a *CarFactory* object is used which creates the instance of the object according to the different cars(cases).
 
 ## **4. Builder Pattern**
-A Builder pattern is a design pattern that lets us extract the object construction out of its own class (its representation) so that it can be used for multiple different representations.
+A Builder pattern is a design pattern that lets us extract the object construction out of its class (its representation) so that it can be used for multiple different representations.
 
 Builder pattern builds a complex object using simple objects by providing a step-by-step approach.
 
@@ -251,11 +251,11 @@ let calculator = new Calculator()
 let result = calculator.add(5).subtract(1).divide(2).compute()
 ```
 
-In the above example, the variables add, subtract, divide, mulitply are extracted outside the constructor and they are initiated separately. Here the multiply variable is not initialized and it is automatically set to zero.
+In the above example, the variables add, subtract, divide, multiply are extracted outside the constructor and they are initiated separately. Here the multiply variable is not initialized and it is automatically set to zero.
 
-This instantiates a calculator and performs multiple operations on top of one another and finally compute something.
+This instantiates a calculator and performs multiple operations on top of one another and finally computes something.
 
-When we call *new Calculator( )*, the result is instantiated with 0 and then any number of operations can be performed on top of it, to compute the final result.
+When we call the *new Calculator( )*, the result is instantiated with 0 and then any number of operations can be performed on top of it, to compute the final result.
 
 ## **5. Prototype Pattern**
 JavaScript does not support classes in its native form like  *Java*.
@@ -302,17 +302,17 @@ var person1 = Person();
 var person2 = Person("Bob", 38);
 
 person1.sayHi();
-// prints out Hello, my name is John Doe, and I am 26
+// Prints out Hello, my name is John Doe, and I am 26
 person2.sayHi();
-// prints out Hello, my name is Bob, and I am 38
+// Prints out Hello, my name is Bob, and I am 38
 
 ```
-In the above example whenever we create a *Person* object , correspondingly *PersonPrototype* object is also instantiated inside of it. Hence the functions of the *PersonPrototype* are inherited inside the Person class and we can perform actions using the functions.
+In the above example whenever we create a *Person* object, correspondingly *PersonPrototype* object is also instantiated inside of it. Hence the functions of the *PersonPrototype* are inherited inside the Person class and we can perform actions using the functions.
 
 ## **Conclusion**
-Here I have explained  about some of the  design patterns used in JavaScript.
+Here I have explained some of the  design patterns used in JavaScript.
 
-While it’s important to know various design patterns, it’s also equally important to not to overuse them. Before using a design pattern, you should carefully consider if your problem fits that design pattern or not. 
+While it’s important to know various design patterns, it’s also equally important  not to overuse them. Before using a design pattern, you should carefully consider if your problem fits that design pattern or not. 
 
 To know if a pattern fits your problem, you should study the design pattern as well as the applications of that design pattern.
 

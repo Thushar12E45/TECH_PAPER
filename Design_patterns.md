@@ -243,7 +243,7 @@ class Calculator
     }
     compute()
     {
-        return this.result;
+       return result ;
     }
 }
 
